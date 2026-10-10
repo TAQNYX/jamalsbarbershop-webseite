@@ -1,1 +1,162 @@
-<h1>Jamal's Barbershop im Aufbau</h1>
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamal's Barbershop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        barber: {
+                            gold: '#D4AF37',
+                            dark: '#111111',
+                            light: '#f5f5f5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-barber-dark text-barber-light font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter text-white">JAMAL'S <span class="text-barber-gold">BARBERSHOP</span></a>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wider">
+                <a href="#info" class="hover:text-barber-gold transition">Info</a>
+                <a href="#preise" class="hover:text-barber-gold transition">Preise</a>
+                <a href="#fotos" class="hover:text-barber-gold transition">Fotos</a>
+                <a href="#kontakt" class="hover:text-barber-gold transition">Kontakt</a>
+            </div>
+            <a href="tel:+49123456789" class="bg-barber-gold text-black px-4 py-2 font-bold rounded hover:bg-white transition">Jetzt Anrufen</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center text-center">
+        <!-- Platzhalter für das Hero-Hintergrundbild -->
+        <div class="absolute inset-0 bg-[url('images/hero.jpg')] bg-cover bg-center opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-barber-dark to-transparent"></div>
+        <div class="relative z-10 px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase tracking-tight">Dein Style. <br><span class="text-barber-gold">Unser Handwerk.</span></h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300">Der Premium Barbershop für echte Männer.</p>
+            <a href="tel:+49123456789" class="inline-block bg-barber-gold text-black text-lg px-8 py-4 font-bold rounded hover:bg-white transition">Termin vereinbaren</a>
+        </div>
+    </header>
+
+    <!-- Info & Adresse -->
+    <section id="info" class="py-20 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-barber-gold uppercase">Über Uns</h2>
+                <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                    Bei Jamal's Barbershop trifft traditionelles Handwerk auf moderne Styles. Wir nehmen uns Zeit für dich, deinen Haarschnitt und deine Bartpflege. Lehn dich zurück und genieß die Auszeit.
+                </p>
+                <div class="flex items-start space-x-4">
+                    <svg class="w-6 h-6 text-barber-gold mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div>
+                        <h4 class="font-bold text-white">Adresse</h4>
+                        <!-- Hier den echten Google Maps Link hinterlegen -->
+                        <a href="https://share.google/ijunqb9D3cguOqN7N" target="_blank" class="text-gray-400 hover:text-barber-gold transition">Musterstraße 1<br>12345 Musterstadt</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Platzhalter für ein Bild vom Salon -->
+            <div class="aspect-square bg-zinc-800 rounded-lg overflow-hidden">
+                <img src="images/info.jpg" alt="Barbershop Info" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Preise -->
+    <section id="preise" class="py-20 bg-barber-dark">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-barber-gold uppercase">Unsere Preise</h2>
+            <div class="space-y-4">
+                <!-- Service Item -->
+                <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Haarschnitt</h3>
+                        <p class="text-gray-500 text-sm">Waschen, Schneiden, Stylen</p>
+                    </div>
+                    <span class="text-xl font-bold text-barber-gold">25 €</span>
+                </div>
+                <!-- Service Item -->
+                <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Bartrasur & Pflege</h3>
+                        <p class="text-gray-500 text-sm">Konturen, Heißes Handtuch, Öl</p>
+                    </div>
+                    <span class="text-xl font-bold text-barber-gold">15 €</span>
+                </div>
+                <!-- Service Item -->
+                <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Komplettpaket</h3>
+                        <p class="text-gray-500 text-sm">Haarschnitt + Bart komplett</p>
+                    </div>
+                    <span class="text-xl font-bold text-barber-gold">35 €</span>
+                </div>
+                <!-- Service Item -->
+                <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Maschinenschnitt</h3>
+                        <p class="text-gray-500 text-sm">Einheitliche Länge</p>
+                    </div>
+                    <span class="text-xl font-bold text-barber-gold">15 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotos (Instagram Style) -->
+    <section id="fotos" class="py-20 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-barber-gold uppercase">Impressionen</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="images/insta1.jpg" alt="Insta 1" class="w-full aspect-square object-cover rounded hover:scale-105 transition duration-300">
+                <img src="images/insta2.jpg" alt="Insta 2" class="w-full aspect-square object-cover rounded hover:scale-105 transition duration-300">
+                <img src="images/insta3.jpg" alt="Insta 3" class="w-full aspect-square object-cover rounded hover:scale-105 transition duration-300">
+                <img src="images/insta4.jpg" alt="Insta 4" class="w-full aspect-square object-cover rounded hover:scale-105 transition duration-300">
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://www.instagram.com/jamals_barbershop/" target="_blank" class="text-gray-400 hover:text-white transition inline-flex items-center">
+                    Mehr auf Instagram <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer mit Kontakt & Öffnungszeiten -->
+    <footer id="kontakt" class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase">Kontakt</h4>
+                <p class="text-gray-400 mb-2">Jamal's Barbershop</p>
+                <p class="text-gray-400 mb-2">Musterstraße 1, 12345 Musterstadt</p>
+                <a href="tel:+49123456789" class="text-barber-gold font-bold text-lg block mt-4">+49 123 456 789</a>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase">Öffnungszeiten</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li class="flex justify-between"><span>Mo - Fr:</span> <span>09:00 - 19:00 Uhr</span></li>
+                    <li class="flex justify-between"><span>Samstag:</span> <span>09:00 - 16:00 Uhr</span></li>
+                    <li class="flex justify-between"><span>Sonntag:</span> <span class="text-gray-600">Geschlossen</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase">Rechtliches</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="impressum.html" class="hover:text-barber-gold transition">Impressum</a></li>
+                    <li><a href="datenschutz.html" class="hover:text-barber-gold transition">Datenschutz</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
